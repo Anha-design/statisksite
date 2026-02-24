@@ -181,10 +181,37 @@ a {
   color: #402f1a;
   font-size: 45px;
   align-self: auto;
+  margin-bottom: 20px;
 }
 
 .subtle {
   color: #402f1aa3;
+}
+
+.productDetails {
+  line-height: 30px;
+}
+.buyButton {
+  background-color: #402f1aa3;
+  color: #f2efe9;
+  display: inline-block;
+  padding: 12px 20px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* --------------- GRID product --------------- */
+
+#productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  align-items: start;
 }
 
 /* --------------- GRID Accessories --------------- */
@@ -194,21 +221,13 @@ a {
   gap: 2rem;
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 50px;
 }
 
 .smallProduct {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-}
-#productContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-  align-items: start;
 }
 
 /* --------------- MEDIA Accessories --------------- */
