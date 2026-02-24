@@ -66,6 +66,11 @@ h2 {
   margin-left: 50px;
 }
 
+h4 {
+  color: #402f1a;
+  font-size: 45 px;
+}
+
 .categorylist {
   margin: 50px;
   display: grid;
@@ -108,7 +113,7 @@ a {
 }
 
 .sale {
-  color: red;
+  color: #811a02;
   text-decoration: line-through;
 }
 
@@ -120,7 +125,7 @@ a {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: black;
+  background-color: #402f1a;
   color: white;
   padding: 10px 14px;
   font-size: 15px;
@@ -134,7 +139,7 @@ a {
 }
 
 .redpricebox {
-  background-color: #e60023;
+  background-color: #811a02;
   color: white;
   display: inline-block;
   padding: 6px 10px;
@@ -155,6 +160,33 @@ a {
   display: block;
 }
 
+/* .productContainer {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+} */
+
+.productImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.back {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #402f1a;
+  margin-left: 50px;
+}
+
+.productName {
+  color: #402f1a;
+  font-size: 45px;
+  align-self: auto;
+}
+
+.subtle {
+  color: #402f1aa3;
+}
+
 /* --------------- GRID Accessories --------------- */
 .product-grid {
   display: grid;
@@ -169,6 +201,16 @@ a {
   flex-direction: column;
   margin-top: 20px;
 }
+#productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  align-items: start;
+}
+
 /* --------------- MEDIA Accessories --------------- */
 @media (max-width: 1200px) {
   .product-grid {
@@ -214,5 +256,13 @@ a {
 @media (max-width: 768px) {
   .categorylist {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* -------------- MEDIA products-------------- */
+
+@media (max-width: 768px) {
+  #productContainer {
+    grid-template-columns: 1fr; /* 1 kolonne */
+    gap: 20px;
   }
 }
