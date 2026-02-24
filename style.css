@@ -50,6 +50,10 @@ h3 {
   color: #402f1a;
 }
 
+h3 {
+  margin-top: 10px;
+}
+
 h1 a,
 h1 a:visited {
   color: #402f1a;
@@ -103,7 +107,93 @@ a {
   background-color: #d9ad77;
 }
 
-/* -------------- MEDIA-------------- */
+.sale {
+  color: red;
+  text-decoration: line-through;
+}
+
+.smallProduct {
+  position: relative;
+}
+
+.soldout {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.soldoutimage {
+  opacity: 50%;
+}
+
+.redpricebox {
+  background-color: #e60023;
+  color: white;
+  display: inline-block;
+  padding: 6px 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.discounted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* --------------- GRID Accessories --------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
+  gap: 2rem;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.smallProduct {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+/* --------------- MEDIA Accessories --------------- */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 kolonner på mellemstore skærme */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner på små skærme */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner på mobilvisning */
+    margin-left: 20px; /* Mindre margin til små skærme */
+    margin-right: 20px;
+  }
+}
+
+/* -------------- MEDIA index-------------- */
 
 @media (max-width: 768px) {
   .mainnav {
