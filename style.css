@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+body {
+  max-width: 1920px;
+}
+
+.container {
+  max-width: 1200px; /* maksimal bredde */
+  margin: 0 auto; /* centrerer siden */
+  padding: 0 20px; /* luft i siderne på mobil */
+}
+body {
+  background-color: #f2efe9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.syne-mono-regular {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-uniquifier {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.categorylist {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
+p,
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #402f1a;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+h1 a,
+h1 a:visited {
+  color: #402f1a;
+  font-size: 90px;
+}
+
+h2 {
+  color: #402f1a;
+  font-size: 45 px;
+  margin-left: 50px;
+}
+
+h4 {
+  color: #402f1a;
+  font-size: 45 px;
+}
+
+.categorylist {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainnav {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* afstand mellem links */
+}
+
+.nav-links {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
+.categorylist a {
+  border: 2px solid #402f1a;
+  padding: 40px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.categorylist a:hover {
+  background-color: #d9ad77;
+}
+
+.sale {
+  color: #811a02;
+  text-decoration: line-through;
+}
+
+.smallProduct {
+  position: relative;
+}
+
+.soldout {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #402f1a;
+  color: white;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.soldoutimage {
+  opacity: 50%;
+}
+
+.redpricebox {
+  background-color: #811a02;
+  color: white;
+  display: inline-block;
+  padding: 6px 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.discounted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* .productContainer {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+} */
+
+.productImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.back {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #402f1a;
+  margin-left: 50px;
+}
+
+.productName {
+  color: #402f1a;
+  font-size: 45px;
+  align-self: auto;
+  margin-bottom: 20px;
+}
+
+.subtle {
+  color: #402f1aa3;
+}
+
+.productDetails {
+  line-height: 30px;
+}
+.buyButton {
+  background-color: #402f1aa3;
+  color: #f2efe9;
+  display: inline-block;
+  padding: 12px 20px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* --------------- GRID product --------------- */
+
+#productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  align-items: start;
+}
+
+/* --------------- GRID Accessories --------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
+  gap: 2rem;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.smallProduct {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* --------------- MEDIA Accessories --------------- */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 kolonner på mellemstore skærme */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner på små skærme */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner på mobilvisning */
+    margin-left: 20px; /* Mindre margin til små skærme */
+    margin-right: 20px;
+  }
+}
+
+/* -------------- MEDIA index-------------- */
+
+@media (max-width: 768px) {
+  .mainnav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  h1 a {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categorylist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* -------------- MEDIA products-------------- */
+
+@media (max-width: 768px) {
+  #productContainer {
+    grid-template-columns: 1fr; /* 1 kolonne */
+    gap: 20px;
+  }
+}
