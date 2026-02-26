@@ -1,0 +1,20 @@
+const endpoint = "https://kea-alt-del.dk/t7/api/categories";
+
+const container = document.querySelector("#categorylist");
+
+function getData() {
+  fetch(endpoint)
+    .then((response) => response.json())
+    .then(showData);
+}
+
+function showData(data) {
+  console.log(data);
+  data.forEach((kategori) => {
+    container.innerHTML += `
+      <a class="catCard" href="productlist.html">${kategori.category}</a>
+    `;
+  });
+}
+
+getData();
