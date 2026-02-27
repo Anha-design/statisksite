@@ -133,8 +133,12 @@ a {
   z-index: 2;
 }
 
-.soldoutimage {
+/* .soldout img {
   opacity: 50%;
+} */
+
+.product-grid .soldoutimage img {
+  opacity: 0.5;
 }
 
 .redpricebox {
@@ -218,7 +222,7 @@ a {
 }
 
 /* --------------- GRID Apparel --------------- */
-#productlist {
+.product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
   gap: 2rem;
@@ -243,7 +247,7 @@ a {
 
 /* --------------- MEDIA Apparel --------------- */
 @media (max-width: 1200px) {
-  #productlist {
+  .product-grid {
     grid-template-columns: repeat(
       3,
       1fr
@@ -252,13 +256,13 @@ a {
 }
 
 @media (max-width: 900px) {
-  #productlist {
+  .product-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 kolonner på små skærme */
   }
 }
 
 @media (max-width: 600px) {
-  #productlist {
+  .product-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 kolonner på mobilvisning */
     margin-left: 20px; /* Mindre margin til små skærme */
     margin-right: 20px;

@@ -1,6 +1,10 @@
-const container = document.querySelector("#productlist");
+const klikKategori = new URLSearchParams(window.location.search).get(
+  "category",
+);
 
-const endpoint = `https://kea-alt-del.dk/t7/api/products`;
+const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${klikKategori}`;
+
+const container = document.querySelector("#productlist");
 
 function getData() {
   fetch(endpoint)
@@ -9,9 +13,8 @@ function getData() {
 }
 
 function showData(json) {
-  console.log(json);
   let markup = "";
-
+  console.log(json);
   json.forEach((product) => {
     console.log(product);
 
