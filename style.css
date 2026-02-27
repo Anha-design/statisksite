@@ -217,8 +217,8 @@ a {
   align-items: start;
 }
 
-/* --------------- GRID Accessories --------------- */
-.product-grid {
+/* --------------- GRID Apparel --------------- */
+#productlist {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
   gap: 2rem;
@@ -241,9 +241,9 @@ a {
   }
 }
 
-/* --------------- MEDIA Accessories --------------- */
+/* --------------- MEDIA Apparel --------------- */
 @media (max-width: 1200px) {
-  .product-grid {
+  #productlist {
     grid-template-columns: repeat(
       3,
       1fr
@@ -252,13 +252,13 @@ a {
 }
 
 @media (max-width: 900px) {
-  .product-grid {
+  #productlist {
     grid-template-columns: repeat(2, 1fr); /* 2 kolonner på små skærme */
   }
 }
 
 @media (max-width: 600px) {
-  .product-grid {
+  #productlist {
     grid-template-columns: repeat(2, 1fr); /* 2 kolonner på mobilvisning */
     margin-left: 20px; /* Mindre margin til små skærme */
     margin-right: 20px;
