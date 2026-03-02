@@ -63,6 +63,11 @@ h1 a:visited {
 h2 {
   color: #402f1a;
   font-size: 45 px;
+  /* margin-left: 50px; */
+}
+.h2Margin {
+  color: #402f1a;
+  font-size: 45 px;
   margin-left: 50px;
 }
 
@@ -172,7 +177,7 @@ a {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   color: #402f1a;
-  margin-left: 50px;
+  margin-bottom: 1%;
 }
 
 .productName {
@@ -180,6 +185,7 @@ a {
   font-size: 45px;
   align-self: auto;
   margin-bottom: 20px;
+  line-height: 40px;
 }
 
 .subtle {
@@ -293,5 +299,18 @@ a {
   #productContainer {
     grid-template-columns: 1fr; /* 1 kolonne */
     gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productName {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .productName {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
