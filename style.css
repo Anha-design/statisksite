@@ -206,6 +206,33 @@ a {
   margin-top: 30px;
 }
 
+.filter-buttons {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.filter-buttons :hover {
+  background-color: #d9ad77;
+}
+
+.filter-buttons button {
+  color: #402f1aa3;
+  padding: 12px 5px;
+  border-radius: 6px;
+  text-align: center;
+  border: 402f1aa3;
+  background-color: #f2efe9;
+}
+
+.filter-buttons button {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
 /* ----------------GRID index ------------------ */
 
 #categorylist {
@@ -228,6 +255,13 @@ a {
 }
 
 /* --------------- GRID Apparel --------------- */
+
+.filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
@@ -252,6 +286,14 @@ a {
 }
 
 /* --------------- MEDIA Apparel --------------- */
+
+/* Tablet + mobil */
+@media (max-width: 768px) {
+  .filter-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(
