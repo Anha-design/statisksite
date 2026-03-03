@@ -125,7 +125,8 @@ a {
   position: relative;
 }
 
-.soldout {
+.smallProduct .sold {
+  display: none;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -138,9 +139,13 @@ a {
   z-index: 2;
 }
 
-/* .soldout img {
+.soldout .sold {
+  display: block;
+}
+
+.soldout img {
   opacity: 50%;
-} */
+}
 
 .product-grid .soldoutimage img {
   opacity: 0.5;
@@ -207,11 +212,10 @@ a {
 }
 
 .filter-buttons {
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 20px;
+  gap: 20px;
 }
 
 .filter-buttons :hover {
@@ -219,18 +223,13 @@ a {
 }
 
 .filter-buttons button {
-  color: #402f1aa3;
-  padding: 12px 5px;
+  padding: 12px 20px;
   border-radius: 6px;
   text-align: center;
-  border: 402f1aa3;
   background-color: #f2efe9;
-}
-
-.filter-buttons button {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  border: 1.3px solid #402f1a;
 }
 
 /* ----------------GRID index ------------------ */
@@ -256,11 +255,11 @@ a {
 
 /* --------------- GRID Apparel --------------- */
 
-.filter-buttons {
+/* .filter-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-}
+} */
 
 .product-grid {
   display: grid;
@@ -287,10 +286,10 @@ a {
 
 /* --------------- MEDIA Apparel --------------- */
 
-/* Tablet + mobil */
-@media (max-width: 768px) {
-  .filter-buttons {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 600px) {
+  .filter-buttons button {
+    padding: 6px 10px;
+    font-size: 12px;
   }
 }
 
