@@ -63,6 +63,11 @@ h1 a:visited {
 h2 {
   color: #402f1a;
   font-size: 45 px;
+  /* margin-left: 50px; */
+}
+.h2Margin {
+  color: #402f1a;
+  font-size: 45 px;
   margin-left: 50px;
 }
 
@@ -120,7 +125,8 @@ a {
   position: relative;
 }
 
-.soldout {
+.smallProduct .sold {
+  display: none;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -133,8 +139,16 @@ a {
   z-index: 2;
 }
 
-.soldoutimage {
+.soldout .sold {
+  display: block;
+}
+
+.soldout img {
   opacity: 50%;
+}
+
+.product-grid .soldoutimage img {
+  opacity: 0.5;
 }
 
 .redpricebox {
@@ -168,7 +182,7 @@ a {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   color: #402f1a;
-  margin-left: 50px;
+  margin-bottom: 1%;
 }
 
 .productName {
@@ -176,6 +190,7 @@ a {
   font-size: 45px;
   align-self: auto;
   margin-bottom: 20px;
+  line-height: 40px;
 }
 
 .subtle {
@@ -194,6 +209,27 @@ a {
   border-radius: 6px;
   text-align: center;
   margin-top: 30px;
+}
+
+.filter-buttons {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.filter-buttons :hover {
+  background-color: #d9ad77;
+}
+
+.filter-buttons button {
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #f2efe9;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  border: 1.3px solid #402f1a;
 }
 
 /* ----------------GRID index ------------------ */
@@ -217,7 +253,14 @@ a {
   align-items: start;
 }
 
-/* --------------- GRID Accessories --------------- */
+/* --------------- GRID Apparel --------------- */
+
+/* .filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+} */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
@@ -241,7 +284,15 @@ a {
   }
 }
 
-/* --------------- MEDIA Accessories --------------- */
+/* --------------- MEDIA Apparel --------------- */
+
+@media (max-width: 600px) {
+  .filter-buttons button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(
@@ -289,5 +340,18 @@ a {
   #productContainer {
     grid-template-columns: 1fr; /* 1 kolonne */
     gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productName {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .productName {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
