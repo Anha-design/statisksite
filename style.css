@@ -63,6 +63,11 @@ h1 a:visited {
 h2 {
   color: #402f1a;
   font-size: 45 px;
+  /* margin-left: 50px; */
+}
+.h2Margin {
+  color: #402f1a;
+  font-size: 45 px;
   margin-left: 50px;
 }
 
@@ -133,8 +138,12 @@ a {
   z-index: 2;
 }
 
-.soldoutimage {
+/* .soldout img {
   opacity: 50%;
+} */
+
+.product-grid .soldoutimage img {
+  opacity: 0.5;
 }
 
 .redpricebox {
@@ -168,7 +177,7 @@ a {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   color: #402f1a;
-  margin-left: 50px;
+  margin-bottom: 1%;
 }
 
 .productName {
@@ -176,6 +185,7 @@ a {
   font-size: 45px;
   align-self: auto;
   margin-bottom: 20px;
+  line-height: 40px;
 }
 
 .subtle {
@@ -194,6 +204,33 @@ a {
   border-radius: 6px;
   text-align: center;
   margin-top: 30px;
+}
+
+.filter-buttons {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.filter-buttons :hover {
+  background-color: #d9ad77;
+}
+
+.filter-buttons button {
+  color: #402f1aa3;
+  padding: 12px 5px;
+  border-radius: 6px;
+  text-align: center;
+  border: 402f1aa3;
+  background-color: #f2efe9;
+}
+
+.filter-buttons button {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
 }
 
 /* ----------------GRID index ------------------ */
@@ -217,7 +254,14 @@ a {
   align-items: start;
 }
 
-/* --------------- GRID Accessories --------------- */
+/* --------------- GRID Apparel --------------- */
+
+.filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 kolonner på store skærme */
@@ -241,7 +285,15 @@ a {
   }
 }
 
-/* --------------- MEDIA Accessories --------------- */
+/* --------------- MEDIA Apparel --------------- */
+
+/* Tablet + mobil */
+@media (max-width: 768px) {
+  .filter-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(
@@ -289,5 +341,18 @@ a {
   #productContainer {
     grid-template-columns: 1fr; /* 1 kolonne */
     gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productName {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .productName {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
